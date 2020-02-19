@@ -1,38 +1,37 @@
 Capatalize = () => {
-  var UserOutArea = document.getElementById("userOutputCase");
-  UserOutArea.classList.remove("hidden");
-  var UserInput = document.getElementById("userInputCase").value;
+  const UserInput = document.getElementById("userInputCase").value;
   CapCase = UserInput.replace(/\b\b\w/g, c => c.toUpperCase());
-  document.getElementById("userOutputCase").value = CapCase;
+  var LowCase = CapCase.replace(/\B\B\w/g, l => l.toLowerCase());
+  document.getElementById("userInputCase").value = LowCase;
 }
 
 UpCase = () => {
-  var UserOutArea = document.getElementById("userOutputCase");
-  UserOutArea.classList.remove("hidden");
-  var UserInput = document.getElementById("userInputCase").value;
+  const UserInput = document.getElementById("userInputCase").value;
   CapsLock = UserInput.toUpperCase();
-  document.getElementById("userOutputCase").value = CapsLock;
+  document.getElementById("userInputCase").value = CapsLock;
 }
 
 Lowercase = () => {
-  var UserOutArea = document.getElementById("userOutputCase");
-  UserOutArea.classList.remove("hidden");
-  var UserInput = document.getElementById("userInputCase").value;
+  const UserInput = document.getElementById("userInputCase").value;
   downcase = UserInput.toLowerCase();
-  document.getElementById("userOutputCase").value = downcase;
+  document.getElementById("userInputCase").value = downcase;
 }
 
 RemoveSpace = () => {
-  var UserOutArea = document.getElementById("userOutputCase");
-  UserOutArea.classList.remove("hidden");
-  var UserInput = document.getElementById("userInputCase").value;
+  const UserInput = document.getElementById("userInputCase").value;
   NoSpace = UserInput.replace(/\s/g, '');
-  document.getElementById("userOutputCase").value = NoSpace;
+  document.getElementById("userInputCase").value = NoSpace;
+}
+
+CharecterCount = () => {
+  const UserInput = document.getElementById("userInputCase").value;
+  const Count = UserInput.length;
+  document.getElementById("CharecterCount").innerHTML = `Total Charecters: ${Count}`;
 }
 
 ResetForm = () => {
   document.getElementById("userInputCase").value = "";
-  document.getElementById("userOutputCase").value = "";
-  var UserOutArea = document.getElementById("userOutputCase");
-  UserOutArea.className += "hidden";
+  document.getElementById("CharecterCount").innerHTML = "";
 } 
+
+ 
