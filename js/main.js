@@ -48,7 +48,7 @@ const FileScrub = document.getElementById('FileScrub')
 FileScrub.addEventListener('click',
   cleanAudioName = () => {
     const UserInput = document.getElementById("userInputCase").value;
-    const songNameScrub = UserInput.replace(/\b0[1-9] \b|\b1[10-99] \b|(^\s*)|(\s+-\s+).*|(.wav)|(.WAV)|(.mp3)|(.MP3)|(\s[Tt]rack)/g, '')
+    const songNameScrub = UserInput.replace(/\b0[1-9] \b|\b1[10-99] \b|(^\s*)|(\s+-\s+).*|(.wav)|(.WAV)|(.mp3)|(.MP3)|(\s[Tt]rack)|([1-9]\s)/g, '')
     //const ArtistNameScrub = UserInput.replace(/(0[1-9] )|([10-99] )|(.wav)|(.WAV)|(.mp3)|(.MP3)/g, '')
     document.getElementById("userInputCase").value = `${songNameScrub}`;
   }
